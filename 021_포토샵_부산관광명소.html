@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            /* 부모값을 상속 */
+        }
+
+        .wrap {
+            width: 860px;
+            margin: 0 auto;
+            background-color: antiquewhite;
+        }
+
+        .title {
+            position: relative;
+        }
+
+        .title .bg {
+            height: 935px;
+        }
+
+        .title .bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title div {
+            font-family: 'S-CoreDream-3Light';
+            width: 100%;
+            position: absolute;
+            top: 115px;
+            left: 0;
+            text-align: center;
+            /* background-color: aqua; */
+        }
+
+        .title div span {
+            width: 250px;
+            height: 50px;
+            background-color: #d86262;
+            display: block;
+            line-height: 50px;
+            border-radius: 25px;
+            font-size: 20px;
+            color: white;
+            margin: 0 auto;
+        }
+
+        .title div h1 {
+            font-size: 100px;
+            color: #fff;
+            margin: 20px 0 50px;
+        }
+
+        .title div p {
+            font-size: 20px;
+            color: #fff;
+            line-height: 28px;
+        }
+
+        .title div figure {
+            text-align: left;
+            margin-top: 150px;
+            margin-left: 50px;
+
+        }
+
+        .cont_wrap .cont01 {
+            background: url(img/다리.jpg) left bottom/cover;
+            padding: 100px 50px;
+            text-align: center;
+
+        }
+
+        .cont_wrap .cont01 h2 {
+            font-family: 'GmarketSansMedium';
+            font-size: 60px;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .cont_wrap .cont01 .list {
+            display: flex;
+            justify-content: space-between;
+            /* background-color: antiquewhite; */
+        }
+
+        .cont_wrap .cont01 .list .item {
+            width: 370px;
+            background-color: #fff;
+            padding: 13px;
+            border: 2px solid black;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .cont_wrap .cont01 .list .item figure {
+            width: 340px;
+            /* 생략가능 */
+            height: 250px;
+        }
+
+        .cont_wrap .cont01 .list .item figure img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cont_wrap .cont01 .list .item div span {
+
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            /* 패딩값만큼 줌*/
+            background-color: #f99158;
+            font-size: 14px;
+            color: #fff;
+            width: 70px;
+            height: 25px;
+            line-height: 25px;
+        }
+
+        .cont_wrap .cont01 .list .item div h3 {
+            font-family: 'Pretendard-Regular';
+            border-bottom: 1px solid #000;
+            font-size: 20px;
+            padding: 20px 0;
+        }
+
+        .cont_wrap .cont01 .list .item div p {
+            font-family: 'Pretendard-Regular';
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .cont_wrap .cont01 .btn {
+            font-family: 'Pretendard-Regular';
+            width: 250px;
+            height: 60px;
+            font-size: 20px;
+            color: fff;
+            background-color: #fe8a8b;
+            line-height: 60px;
+            border-radius: 30px;
+            border: 2px solid black;
+            margin: 50px auto 0;
+        }
+
+        .cont_wrap .cont01 .btn a {
+            display: block;
+            /* 클릭영역이 다 잡힘 */
+        }
+
+        .cont_wrap .cont02 {
+            background: rgb(254, 138, 139);
+            background: linear-gradient(0deg, rgba(254, 138, 139, 1) 0%,
+                    rgba(247, 130, 73, 1) 53%, rgba(255, 175, 131, 1) 100%);
+            padding: 100px 50px;
+            position: relative;
+        }
+
+        .cont_wrap .cont02 h2 {
+            font-family: 'GmarketSansMedium';
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cont_wrap .cont02 .list .item {
+
+            background-color: white;
+            border: 2px solid #000;
+            padding: 13px;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 30px;
+
+        }
+
+        .cont_wrap .cont02 .list .item figure {
+            width: 355px;
+            height: 270px;
+        }
+
+        .cont_wrap .cont02 .list .item figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cont_wrap .cont02 .list .item div
+
+        /* 텍스트상자 크기 */
+            {
+            font-family: 'Pretendard-Regular';
+            width: 355px;
+        }
+
+        .cont_wrap .cont02 .list .item div h3 {
+            font-size: 30px;
+        }
+
+        .cont_wrap .cont02 .list .item div p {
+            font-size: 18px;
+            margin: 15px 0 30px;
+        }
+
+        .cont_wrap .cont02 .list .item div strong {
+            font-size: 30px;
+            color: #dc0404;
+        }
+
+        .cont_wrap .cont02 .btn {
+            font-family: 'Pretendard-Regular';
+            font-size: 20px;
+            background-color: #063881;
+            border: 2px solid #000;
+            color: white;
+            width: 250px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 30px;
+            margin: 50px auto 0;
+        }
+
+        .cont_wrap .cont02 .btn a {
+            display: block;
+        }
+
+        .cont_wrap .cont02>figure
+
+        /* > 자식 선택자  .cont2를 기준으로 item figure는 자손 */
+            {
+            position: absolute;
+            right: 50px;
+            bottom: 0;
+        }
+
+        .call {
+            font-family: 'Pretendard-Regular';
+            height: 100px;
+            font-size: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="title">
+            <figure class="bg">
+                <img src="img/바다.jpg" alt="부산관광명소 타이틀 배경" />
+            </figure> <!-- .bg end -->
+            <div>
+                <span>취향저격 국내여행</span>
+                <h1>부산시티투어</h1>
+                <p>한국의 항구도시이자 육, 해, 공을 아우르는 중요한 교통 중심지.
+                    <br />눈부신 조명과 바다에 비친 도시의 모습이 어우러진
+                    <br />부산의 야경은 더없이 낭만적입니다.
+                </p>
+                <figure>
+                    <img src="img/여행하는-사람.png" alt="부산관광명소 타이틀 캐릭터" />
+                </figure>
+            </div>
+        </div><!-- .title end -->
+
+        <div class="cont_wrap">
+            <div class="cont01">
+                <h2>부산의 관광명소</h2>
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/블루라인.png" alt="해운대 블루라인파크 이미지" />
+                        </figure>
+
+                        <div>
+                            <span>BEST</span>
+                            <h3>해운대 블루라인파크</h3>
+                            <p>수려한 해안 절경을 따라 해운대 해변열차와
+                                <br />해운대 스카이캡슐을 운행하는
+                                <br />국제 관광도시 부산,
+                                <br />해운대 관광특구의 핵심 관광 시설
+                            </p>
+                        </div>
+                    </div> <!-- item end -->
+
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/용궁사.png" alt="해동 용궁사 이미지" />
+                        </figure>
+
+                        <div>
+                            <span>BEST</span>
+                            <h3>해동 용궁사</h3>
+                            <p>부산시 기장군 동쪽에 자리잡은 해동 용궁사
+                                <br />바다와 가장 가까운 사찰로 알려져 있고,
+                                <br />대한민국의 관음성지의 하나
+                            </p>
+                        </div>
+                    </div> <!-- item end -->
+
+                </div> <!-- list end -->
+
+                <div class="btn">
+                    <a href="#">더알아보기</a>
+                </div> <!-- btn end -->
+            </div><!-- cont01 end -->
+
+            <div class="cont02">
+                <h2>부산시티투어</h2>
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/해운대출발.png" alt="해운대출발코스 이미지" />
+                        </figure>
+                        <div>
+                            <h3>해운대출발코스</h3>
+                            <p>UN기념공원 - 산만디투어 - 망향로 전시관,
+                                <br />이바구공작소, 168계단 - 태종대 -
+                                <br />영도 흰여울문화마을 - 송도해수욕장 - 스카이워크
+                                <br />- 자갈치시장,남포동 BIFF광장,광복동
+                            </p>
+                            <strong>32,000원</strong>
+                        </div>
+                    </div> <!-- item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/부산역출발.png" alt="부산역출발코스 이미지" />
+                        </figure>
+                        <div>
+                            <h3>부산역출발코스</h3>
+                            <p>기장 해동용궁사 - 기장 아난티코브 -
+                                <br />해운대 블루라인파크 해변열차 - 미포에서 해운대
+                                <br />- 자갈치 시장, 남포동 BIFF광장, 광복동
+                            </p>
+                            <strong>36,000원</strong>
+                        </div>
+                    </div> <!-- item end -->
+
+                </div> <!-- list end -->
+
+                <div class="btn">
+                    <a href="#">예약바로가기</a>
+                </div><!-- btn end -->
+                <figure>
+                    <img src="img/캐리어끄는-사람.png" alt="부산시티투어캐릭터" />
+                </figure>
+            </div> <!-- cont02 end -->
+        </div> <!-- cont wrap end -->
+
+        <div class="call">
+            <a href="tel:1833-5880">문의전화 1833-5880</a>
+        </div> <!-- call end -->
+
+    </div><!-- .wrap end -->
+</body>
+
+</html>
